@@ -33,7 +33,7 @@ public class Album {
 
     private String link;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Artist artist;
 
     public Album(@NotNull String title, @NotNull LocalDate releaseDate, String link, Artist artist) {

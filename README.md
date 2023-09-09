@@ -1,25 +1,31 @@
 # Music-Library
 
-# Server Side
+# Database diagram
 
-## Database diagram
+<img width="510" alt="image" src="https://github.com/DangQuangHuy277/Music-Library/assets/62865419/c0a0e91f-0078-4d1f-aa11-d82513b78fee">
 
-![Untitled](https://github.com/DangQuangHuy277/Music-Library/assets/62865419/72e060b5-a0ee-4b86-9d1f-921ce6e811ec)
 
 First change directory to server by ```cd server``` then
 
-# Install nessessory dependency, package for server
+# Install nessessory dependency, package
 (If yarn is not installed then install using ```npm install --global yarn```)
-
-Run this command by terminal
+- Install package for frontend
+```cd frontend```
 ```yarn install```
 
 # Set up database
-- Enable postgreSQL extension to auto generate id 
+Enable postgreSQL extension to auto generate id 
 (Run this command by psql of postgreSQL to add extension to postgreSQL to use auto generate uuid):
 ```CREATE EXTENSION IF NOT EXISTS "uuid-ossp";```
 
-# Test and Using
+Run sql file ```database.sql``` in resource folder to set up database table
+
+Run sql file ```data.sql``` to add test account
+- email: admin1@gmail.com with password: 123456
+- email: user1@gmail.com with password: 123456
+
+
+# API
 ## Authentication API
 Note that authentication API is have format: `/api/v1/auth/${endpoint}`
 | Method | Endpoint | Description |
@@ -53,5 +59,11 @@ Note that all API URL have format: `/api/v1/${endpoint}`
 | GET | /artists/\:id/songs | Return list songs of a specific artist |
 | GET | /albums/\:id/songs | Return list songs of a specific album |
 | GET | /songs/\:id/artist | Return list songs of a specific artist |
+
+# Test in localhost
+Run frontend: ```cd frontend``` then run ```yarn dev```
+
+Run backend: ```cd backend``` then run ```./mvnw spring-boot:run```
+
 
 
