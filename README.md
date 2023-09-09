@@ -5,7 +5,6 @@
 <img width="510" alt="image" src="https://github.com/DangQuangHuy277/Music-Library/assets/62865419/c0a0e91f-0078-4d1f-aa11-d82513b78fee">
 
 
-First change directory to server by ```cd server``` then
 
 # Install nessessory dependency, package
 (If yarn is not installed then install using ```npm install --global yarn```)
